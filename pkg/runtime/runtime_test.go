@@ -28,6 +28,7 @@ import (
 	"google.golang.org/grpc/test/bufconn"
 	"mosn.io/layotto/components/custom"
 	"mosn.io/layotto/components/hello/helloworld"
+	"mosn.io/layotto/components/sequencer"
 	sequencer_etcd "mosn.io/layotto/components/sequencer/etcd"
 	sequencer_redis "mosn.io/layotto/components/sequencer/redis"
 	sequencer_zookeeper "mosn.io/layotto/components/sequencer/zookeeper"
@@ -50,7 +51,6 @@ import (
 	"mosn.io/layotto/components/lock"
 	mock_component "mosn.io/layotto/components/pkg/mock"
 	"mosn.io/layotto/components/rpc"
-	"mosn.io/layotto/components/sequencer"
 	"mosn.io/layotto/pkg/mock"
 	mock_invoker "mosn.io/layotto/pkg/mock/components/invoker"
 	mock_lock "mosn.io/layotto/pkg/mock/components/lock"
@@ -59,7 +59,6 @@ import (
 	mock_state "mosn.io/layotto/pkg/mock/components/state"
 	mlock "mosn.io/layotto/pkg/runtime/lock"
 	mpubsub "mosn.io/layotto/pkg/runtime/pubsub"
-	msequencer "mosn.io/layotto/pkg/runtime/sequencer"
 	mstate "mosn.io/layotto/pkg/runtime/state"
 )
 
@@ -411,7 +410,7 @@ func TestMosnRuntime_initSequencers(t *testing.T) {
 		m.errInt = func(err error, format string, args ...interface{}) {
 			log.DefaultLogger.Errorf("[runtime] occurs an error: "+err.Error()+", "+format, args...)
 		}
-		err := m.initSequencers(msequencer.NewFactory("mock", f))
+		err := m.initSequencers(runtime_sequencer.NewFactory("mock", f))
 		assert.Nil(t, err)
 	})
 }

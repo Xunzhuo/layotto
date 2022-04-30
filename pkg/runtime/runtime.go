@@ -208,7 +208,7 @@ func (m *MosnRuntime) Run(opts ...Option) (mgrpc.RegisteredServer, error) {
 		grpc.WithGrpcAPIs(apis),
 	)
 	// 3. create grpc server
-	var err error = nil
+	var err error
 	m.srv, err = grpc.NewGrpcServer(grpcOpts...)
 	return m.srv, err
 }
