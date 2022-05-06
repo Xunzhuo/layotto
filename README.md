@@ -2,10 +2,11 @@
   <h1>Layotto (L8): To be the next layer of OSI layer 7</h1>
   <img src="https://raw.githubusercontent.com/mosn/layotto/main/docs/img/logo/grey2-1.svg" height="120px">
 
+[![Env Pipeline 🌊](https://github.com/mosn/layotto/actions/workflows/pr-title-checker.yml/badge.svg)](https://github.com/mosn/layotto/actions/workflows/pr-title-checker.yml)
+[![Dev Pipeline 🌊](https://github.com/mosn/layotto/actions/workflows/layotto-ci.yml/badge.svg)](https://github.com/mosn/layotto/actions/workflows/layotto-ci.yml)
+
 [![GoDoc](https://godoc.org/mosn.io/layotto?status.svg)](https://godoc.org/mosn.io/layotto)
-[![Build Status](https://img.shields.io/github/workflow/status/mosn/layotto/test?branch=master)](https://github.com/mosn/layotto/actions)
 [![Go Report Card](https://goreportcard.com/badge/github.com/mosn/layotto)](https://goreportcard.com/report/mosn.io/layotto)
-[![CodeQL](https://github.com/mosn/layotto/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/mosn/layotto/actions/workflows/codeql-analysis.yml)
 [![codecov](https://codecov.io/gh/mosn/layotto/branch/main/graph/badge.svg?token=10RxwSV6Sz)](https://codecov.io/gh/mosn/layotto)
 [![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/mosn/layotto.svg)](http://isitmaintained.com/project/mosn/layotto "Average time to resolve an issue")
 
