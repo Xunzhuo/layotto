@@ -9,6 +9,8 @@ set -e
 
 GO_VERSION=${1:-"default"}
 
+DEFAULT_VERSION="default"
+
 quickstarts_in_default="docs/en/start/configuration/start.md
   docs/zh/start/configuration/start.md
   docs/en/start/state/start.md
@@ -71,7 +73,9 @@ release_resource
 # download etcd
 sh etc/script/download_etcd.sh
 
-if [ "${GO_VERSION}" == "default" ]; then
+echo "quickstarts in version ${GO_VERSION}"
+
+if [ ${GO_VERSION} == ${DEFAULT_VERSION} ]; then
   quickstarts=${quickstarts_in_default}
   echo "quickstarts in version ${GO_VERSION} contain ${quickstarts}"
   # test quickstarts
