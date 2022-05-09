@@ -73,7 +73,7 @@ sh etc/script/download_etcd.sh
 
 if [ "${GO_VERSION}" == "default" ]; then
   quickstarts=${quickstarts_in_default}
-  echo "quickstarts contain ${quickstarts}"
+  echo "quickstarts in version ${GO_VERSION} contain ${quickstarts}"
   # test quickstarts
   for doc in ${quickstarts}; do
     echo "Start testing $doc......"
@@ -86,7 +86,7 @@ if [ "${GO_VERSION}" == "default" ]; then
   done
 else
   quickstarts=${quickstarts_in_advance}
-  echo "quickstarts contain ${quickstarts}"
+  echo "quickstarts in version ${GO_VERSION} contain ${quickstarts}"
   # test quickstarts
   for doc in ${quickstarts}; do
     echo "Start testing $doc......"
